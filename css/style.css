@@ -19,15 +19,15 @@ p {
 }
 
 .navbarContainer {
-  margin: 0;
-  background-color: #393E46;
-  position: absolute;
-  top: 0%;
   height: 10%;
   width: 100%;
+  background-color: #393E46;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin: 0;
+  top: 0%;
 }
 
 .navbarChild a {
@@ -50,9 +50,10 @@ p {
 }
 
 #mainDiv {
-  position: absolute;
-  width: 50%;
   height: 50%;
+  width: 50%;
+  background-color: #222831;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -68,15 +69,18 @@ p {
 }
 
 #footer {
-  background-color: #393E46;
-  position: absolute;
   height: 10%;
   width: 100%;
-  bottom: 0%;
+  background-color: #393E46;
+  position: absolute;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  bottom: 0%;
+}
+#footer i {
+  padding-top: 10px;
 }
 #footer p {
   font-size: 0.75rem;

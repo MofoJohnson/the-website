@@ -10,6 +10,20 @@
     }
 }
 
+@mixin divBlock($height, $width, $backgroundColour: #222831, $position: absolute) {
+    height: $height;
+    width: $width;
+    background-color: $backgroundColour;
+    position: $position;
+}
+
+@mixin flexBox($display, $align, $justify, $direction: null) {
+    display: $display;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
 // VARIABLES
 $divPadding: 0px 250px 50px 250px;
 
@@ -36,31 +50,22 @@ p {
 
 // NAVBAR
 .navbarContainer {
+    @include divBlock(10%, 100%, #393E46);
+    @include flexBox(flex, center, space-evenly);
+
     margin: 0;
-    background-color: #393E46;
-    position: absolute;
     top: 0%;
-    height: 10%;
-    width: 100%;
-    //padding-left: 10%;
-    //padding-right: 10%;
- 
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
 }
 
 .navbarChild {
     @include anchorStyle;
 
     h1 {
-        //padding: 0 0 0 20%;
     }
 
     ul {
         list-style-type: none;
         margin: 0;
-        //padding: 0 20% 0 0;
         overflow: hidden;
 
         li {
@@ -76,11 +81,8 @@ p {
 
 // TITLE DIV
 #mainDiv {
-    //padding: $divPadding;
-    //background-color: #393E46;
-    position: absolute;
-    width: 50%;
-    height: 50%;
+    @include divBlock(50%, 50%);
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -96,19 +98,13 @@ p {
 }
 
 #footer {
-    background-color: #393E46;
-    position: absolute;
-    height: 10%;
-    width: 100%;
+    @include divBlock(10%, 100%, #393E46);
+    @include flexBox(flex, center, space-evenly, column);
+
     bottom: 0%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
     i {
-        //padding-right: 10px;
+        padding-top: 10px;
     }
 
     p {
