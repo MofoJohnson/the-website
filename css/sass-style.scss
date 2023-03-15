@@ -1,0 +1,118 @@
+// MIXINS
+@mixin anchorStyle {
+    a {
+        color: #EEEEEE;
+        text-decoration: none;
+     
+        &:hover {
+            color: #00ADB5;
+        }
+    }
+}
+
+// VARIABLES
+$divPadding: 0px 250px 50px 250px;
+
+// STYLING
+html {
+    font-family: "Roboto Mono", monospace;
+    color: #EEEEEE;
+    text-align: center;
+}
+
+body {
+    background-color: #222831;
+    margin: 0px;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 10%;
+}
+
+p {
+    font-weight: 300;
+}
+
+// NAVBAR
+.navbarContainer {
+    margin: 0;
+    background-color: #393E46;
+    position: absolute;
+    top: 0%;
+    height: 10%;
+    width: 100%;
+    //padding-left: 10%;
+    //padding-right: 10%;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navbarChild {
+    @include anchorStyle;
+
+    h1 {
+        //padding: 0 0 0 20%;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        //padding: 0 20% 0 0;
+        overflow: hidden;
+
+        li {
+            float: left;
+
+            a {
+                padding: 0px 0px 0px 50px;
+
+            }
+        }
+    }
+}
+
+// TITLE DIV
+#mainDiv {
+    //padding: $divPadding;
+    //background-color: #393E46;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#title {
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.subHeading {
+   font-weight: 400; 
+}
+
+#footer {
+    background-color: #393E46;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    bottom: 0%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    i {
+        //padding-right: 10px;
+    }
+
+    p {
+        //padding-left: 10px;
+        font-size: 0.75rem;
+    }
+}
