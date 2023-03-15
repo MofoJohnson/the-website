@@ -4,6 +4,10 @@ html {
   text-align: center;
 }
 
+.scaryFace {
+  background-image: url("../images/jeff.gif");
+}
+
 body {
   background-color: #222831;
   margin: 0px;
