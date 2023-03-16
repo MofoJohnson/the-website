@@ -6,8 +6,8 @@ function hahaFunny() {
     const miliseconds = randNum * 1000;
 
     const bigScaryJumpScare = setTimeout(() => {
-        $("body").hide();
         $("html").addClass("scaryFace");
+        $("body").hide();
 
        setTimeout(() => {
             $("body").show();
