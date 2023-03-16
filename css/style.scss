@@ -54,7 +54,7 @@ p {
 
 // NAVBAR
 .navbarContainer {
-    @include divBlock(10%, 100%, #393E46);
+    @include divBlock(5rem, 100vw, #393E46);
     @include flexBox(flex, center, space-evenly);
 
     margin: 0;
@@ -85,11 +85,12 @@ p {
 
 // TITLE DIV
 #mainDiv {
-    @include divBlock(50%, 50%);
+    @include divBlock(80vh, 100vw);
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 5rem;
+    bottom: 5rem;
+    //left: 50%;
+    //transform: translate(-50%, -50%);
 }
 
 #title {
@@ -102,7 +103,7 @@ p {
 }
 
 #footer {
-    @include divBlock(10%, 100%, #393E46);
+    @include divBlock(5rem, 100vw, #393E46);
     @include flexBox(flex, center, space-evenly, column);
 
     bottom: 0%;
