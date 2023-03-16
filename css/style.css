@@ -15,6 +15,8 @@ body {
   flex-direction: column;
   background-color: #222831;
   margin: 0px;
+  width: 100vw;
+  height: 100vh;
 }
 
 h1 {
