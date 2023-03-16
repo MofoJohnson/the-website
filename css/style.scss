@@ -10,15 +10,14 @@
     }
 }
 
-@mixin divBlock($height, $width, $backgroundColour: #222831, $position: absolute) {
+@mixin divBlock($height, $width, $backgroundColour: #222831) {
     height: $height;
     width: $width;
     background-color: $backgroundColour;
-    position: $position;
 }
 
-@mixin flexBox($display, $align, $justify, $direction: null) {
-    display: $display;
+@mixin flexBox($align, $justify, $direction: null) {
+    display: flex;
     align-items: $align;
     justify-content: $justify;
     flex-direction: $direction;
@@ -39,13 +38,14 @@ html {
 }
 
 body {
+    @include flexBox(center, space-between, column);
+
     background-color: #222831;
     margin: 0px;
 }
 
 h1 {
     font-size: 2rem;
-    line-height: 10%;
 }
 
 p {
@@ -55,7 +55,7 @@ p {
 // NAVBAR
 .navbarContainer {
     @include divBlock(5rem, 100vw, #393E46);
-    @include flexBox(flex, center, space-evenly);
+    @include flexBox(center, space-evenly);
 
     margin: 0;
     top: 0%;
@@ -63,9 +63,6 @@ p {
 
 .navbarChild {
     @include anchorStyle;
-
-    h1 {
-    }
 
     ul {
         list-style-type: none;
@@ -83,14 +80,13 @@ p {
     }
 }
 
-// TITLE DIV
-#mainDiv {
-    @include divBlock(80vh, 100vw);
+// TITLE CONTAINER
+#mainContainer {
+    @include divBlock(39.5rem, 100vw);
+    @include flexBox(center, center, column);
 
     top: 5rem;
     bottom: 5rem;
-    //left: 50%;
-    //transform: translate(-50%, -50%);
 }
 
 #title {
@@ -102,18 +98,18 @@ p {
    font-weight: 400; 
 }
 
+// FOOTER
 #footer {
     @include divBlock(5rem, 100vw, #393E46);
-    @include flexBox(flex, center, space-evenly, column);
+    @include flexBox(center, space-evenly, column);
 
-    bottom: 0%;
+    //bottom: 0;
 
     i {
         padding-top: 10px;
     }
 
     p {
-        //padding-left: 10px;
         font-size: 0.75rem;
     }
 }

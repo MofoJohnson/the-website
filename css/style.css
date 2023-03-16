@@ -9,13 +9,16 @@ html {
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
   background-color: #222831;
   margin: 0px;
 }
 
 h1 {
   font-size: 2rem;
-  line-height: 10%;
 }
 
 p {
@@ -26,7 +29,6 @@ p {
   height: 5rem;
   width: 100vw;
   background-color: #393E46;
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -53,11 +55,14 @@ p {
   padding: 0px 0px 0px 50px;
 }
 
-#mainDiv {
-  height: 80vh;
+#mainContainer {
+  height: 39.5rem;
   width: 100vw;
   background-color: #222831;
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   top: 5rem;
   bottom: 5rem;
 }
@@ -75,12 +80,10 @@ p {
   height: 5rem;
   width: 100vw;
   background-color: #393E46;
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  bottom: 0%;
 }
 #footer i {
   padding-top: 10px;
