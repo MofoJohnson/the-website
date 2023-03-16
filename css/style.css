@@ -1,11 +1,15 @@
+.scaryFace {
+  background-image: url("../images/jeff.gif");
+}
+
+.painting {
+  background-image: url("../images/caesar.jpg");
+}
+
 html {
   font-family: "Roboto Mono", monospace;
   color: #EEEEEE;
   text-align: center;
-}
-
-.scaryFace {
-  background-image: url("../images/jeff.gif");
 }
 
 body {

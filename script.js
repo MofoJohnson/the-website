@@ -12,6 +12,15 @@ function getTimeLeft() {
     };
 };
 
+function thePainting() {
+    $("html").addClass("painting");
+
+    setTimeout(() => {
+        $("body").show();
+        $("html").removeClass("painting");
+    }, 5000)
+}
+
 function bigScaryJumpScare() {
     $("html").addClass("scaryFace");
     $("body").hide();
@@ -19,8 +28,8 @@ function bigScaryJumpScare() {
     setTimeout(() => {
         $("body").show();
         $("html").removeClass("scaryFace");
+        //thePainting();
 
-        bigScaryJumpScare.break;
     }, 15000);
 };
 
